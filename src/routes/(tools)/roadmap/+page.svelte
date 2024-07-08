@@ -1,3 +1,13 @@
+The issue with the "virtual mindmap" not showing up could be due to several reasons. Let's debug step-by-step:
+
+1. **Check the Data**: Ensure that the "virtual mindmap" is correctly included in the `launched` array.
+2. **HTML Structure**: Verify the HTML structure to ensure that there are no issues rendering the elements.
+3. **Svelte Each Block**: Make sure that the `each` block in Svelte is correctly iterating over all the items in the `launched` array.
+4. **CSS Issues**: Ensure there are no CSS issues causing the "virtual mindmap" row to be hidden or improperly displayed.
+
+Here is the modified script including the "virtual mindmap" in the `launched` array for a complete check:
+
+```svelte
 <script>
     import { Avatar } from "flowbite-svelte"
 
@@ -130,7 +140,7 @@
                 githubId: 'hannansatopay'
             }]
         },
-       {
+        {
             name: 'Image Compress Services',
             contributors: [{
                 name: 'Shreya Patil',
@@ -185,9 +195,17 @@
                 name: 'Sahil Balia',
                 githubId: 'sahilbalia'
             }]
+        },
+        {
+            name: 'Virtual Mindmap',
+            contributors: [{
+                name: 'Cheryl Lobo',
+                githubId: 'cheryllobo'
+            }]
         }
     ];
 </script>
+
 <section class="bg-white dark:bg-gray-900 p-3 sm:p-5">
     <div class="mx-auto max-w-screen-xl px-4 lg:px-12">
         <h2 class="mb-8 text-2xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white">
@@ -224,3 +242,5 @@
         </div>
     </div>
 </section>
+
+
